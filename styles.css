@@ -485,11 +485,125 @@ body {
   font-size: 1rem;
 }
 
-.contact-note {
-  text-align: center;
+/* Contact Form */
+.contact-form {
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
   font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--brown);
+  letter-spacing: 0.02em;
+}
+
+.form-group label .required {
+  color: var(--terracotta);
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--brown);
+  background: var(--warm-white);
+  border: 1px solid rgba(92, 64, 51, 0.18);
+  border-radius: 10px;
+  padding: 0.7rem 0.9rem;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
   color: var(--soft-brown);
-  opacity: 0.8;
+  opacity: 0.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--caramel);
+  box-shadow: 0 0 0 3px rgba(196, 149, 106, 0.15);
+}
+
+.form-group input.invalid,
+.form-group textarea.invalid {
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 480px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.form-hint {
+  font-size: 0.8rem;
+  color: var(--soft-brown);
+  opacity: 0.75;
+  margin: -0.5rem 0 0;
+}
+
+.form-captcha {
+  display: flex;
+  justify-content: center;
+}
+
+.form-error {
+  text-align: center;
+  color: #c0392b;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: rgba(192, 57, 43, 0.07);
+  border-radius: 8px;
+}
+
+.form-success {
+  text-align: center;
+  color: #27ae60;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0.6rem 1rem;
+  background: rgba(39, 174, 96, 0.07);
+  border-radius: 8px;
+}
+
+.btn-submit {
+  align-self: center;
+  cursor: pointer;
+  border: none;
+  font-size: 1rem;
+  padding: 0.9rem 2.5rem;
+}
+
+.btn-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
 }
 
 /* Footer */
