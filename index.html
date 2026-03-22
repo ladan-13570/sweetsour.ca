@@ -4,26 +4,33 @@
   <meta charset="UTF-8">
   <meta name="google-site-verification" content="0N1riZJj1P97AHiOOaRwXZzN3xIPeEUgONhMhFgw2ZA" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sweet &amp; Sour Treats &#8212; small-batch homemade cookies, cakes, bold sour snacks &amp; artisanal pickles. Baked with love in Toronto.">
-  <title>Sweet &amp; Sour Treats &#8212; Homemade Bakery &amp; Sour Snacks | Toronto</title>
+  <meta name="description" content="Sweet &amp; Sour Treats &mdash; small-batch homemade cookies, cakes, bold sour snacks &amp; artisanal pickles. Baked with love in Toronto.">
+  <title>Sweet &amp; Sour Treats &mdash; Homemade Bakery &amp; Sour Snacks | Toronto</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
-  <!-- ── Navigation ── -->
+  <!-- Navigation -->
   <header class="header">
     <nav class="nav container">
-      <a href="#home" class="logo" aria-label="Home">Sweet<span class="logo-amp">&amp;</span>Sour</a>
+      <a href="#home" class="logo" aria-label="Home">Sweet&amp;Sour</a>
       <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
         <li><a href="#products">Treats</a></li>
         <li><a href="#about">Our Story</a></li>
-        <li><a href="#order" class="nav-cta">Order Now</a></li>
+        <li><a href="#order">Contact</a></li>
       </ul>
+      <div class="nav-right">
+        <a href="#home" class="nav-icon" aria-label="Home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </a>
+        <a href="#order" class="nav-cta">Order Now</a>
+      </div>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -32,187 +39,125 @@
 
   <main>
 
-    <!-- ── Hero ── -->
+    <!-- Hero -->
     <section id="home" class="hero">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="hero-orb hero-orb--1"></div>
-        <div class="hero-orb hero-orb--2"></div>
-        <div class="hero-orb hero-orb--3"></div>
-        <div class="hero-orb hero-orb--4"></div>
-      </div>
-      <div class="hero-content">
-        <span class="hero-badge">Homemade in Toronto</span>
-        <h1>Where Sweet<br>Meets <em>Sour</em></h1>
-        <p class="hero-sub">Small-batch cookies, signature cakes, and our bold sour snack collection &#8212; handcrafted from scratch, never from a box.</p>
-        <div class="hero-ctas">
-          <a href="#order" class="btn btn-primary">Place Your Order</a>
-          <a href="#products" class="btn btn-outline">Explore Treats</a>
+      <div class="hero-inner container">
+        <div class="hero-text">
+          <h1>Sweet Moments<br>Start Here</h1>
+          <p class="hero-sub">The destination for handmade treats crafted with love &mdash; small-batch cookies, signature cakes, and bold sour snacks.</p>
+          <div class="hero-ctas">
+            <a href="#order" class="btn btn-primary">Order Now</a>
+            <a href="#products" class="btn-text">
+              <span class="btn-text-play">&#9654;</span>
+              Explore Our Treats
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="images/hero-cake.png" alt="Chocolate cake topped with Oreos, M&Ms, and chocolate pieces on a white cake stand" loading="eager">
         </div>
       </div>
-      <a href="#marquee" class="scroll-hint" aria-label="Scroll down">
-        <span class="scroll-hint-dot"></span>
-      </a>
     </section>
 
-    <!-- ── Marquee ── -->
-    <div id="marquee" class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>Chocolate Chip Cookies</span>
-        <span class="marquee-dot"></span>
-        <span>Trio-Leches Cake</span>
-        <span class="marquee-dot"></span>
-        <span>Signature Sour Snacks</span>
-        <span class="marquee-dot"></span>
-        <span>Baklava Cake</span>
-        <span class="marquee-dot"></span>
-        <span>Artisanal Pickles</span>
-        <span class="marquee-dot"></span>
-        <span>Caramel &amp; Nescafe</span>
-        <span class="marquee-dot"></span>
-        <span>Date &amp; Sugar Cookies</span>
-        <span class="marquee-dot"></span>
-        <span>Chocolate Fudge Cake</span>
-        <span class="marquee-dot"></span>
-        <span>Cherry Sour Blend</span>
-        <span class="marquee-dot"></span>
-        <span>Plum Mix</span>
-        <span class="marquee-dot"></span>
-        <!-- Duplicate for seamless loop -->
-        <span>Chocolate Chip Cookies</span>
-        <span class="marquee-dot"></span>
-        <span>Trio-Leches Cake</span>
-        <span class="marquee-dot"></span>
-        <span>Signature Sour Snacks</span>
-        <span class="marquee-dot"></span>
-        <span>Baklava Cake</span>
-        <span class="marquee-dot"></span>
-        <span>Artisanal Pickles</span>
-        <span class="marquee-dot"></span>
-        <span>Caramel &amp; Nescafe</span>
-        <span class="marquee-dot"></span>
-        <span>Date &amp; Sugar Cookies</span>
-        <span class="marquee-dot"></span>
-        <span>Chocolate Fudge Cake</span>
-        <span class="marquee-dot"></span>
-        <span>Cherry Sour Blend</span>
-        <span class="marquee-dot"></span>
-        <span>Plum Mix</span>
-        <span class="marquee-dot"></span>
+    <!-- Social Bar -->
+    <div class="social-bar">
+      <div class="container">
+        <div class="social-icons">
+          <a href="https://instagram.com/sweetsour.ca" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="mailto:hello@sweetsour.ca" aria-label="Email">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+          <span class="social-divider"></span>
+          <a href="#" aria-label="Favorites">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </a>
+          <a href="#" aria-label="Share">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </a>
+        </div>
       </div>
     </div>
 
-    <!-- ── Products ── -->
+    <!-- Products -->
     <section id="products" class="products">
       <div class="container">
         <div class="section-head">
-          <span class="label">What We Make</span>
-          <h2>Every treat, made<br>from <em>scratch</em></h2>
-          <p class="section-sub">Tap any card to see our flavours.</p>
+          <h2>Explore Our Treats</h2>
+          <p class="section-sub">Small-batch desserts crafted with care and the finest ingredients.</p>
         </div>
 
         <div class="product-grid">
-          <!-- Cookies — featured -->
-          <article class="product-card product-card--featured" data-product="cookies" data-accent="rose">
-            <div class="card-accent"></div>
-            <span class="card-emoji">&#127850;</span>
-            <div class="card-body">
-              <h3>Cookies</h3>
-              <p>Baked in small batches with real butter and honest ingredients. From our bestselling Chocolate Chip to nostalgic Date cookies &#8212; perfect by the dozen.</p>
+          <article class="product-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=400&h=300&fit=crop&q=80" alt="Handcrafted cookies with latte" loading="lazy">
             </div>
-            <div class="product-subgrid">
-              <button class="chip"><span>&#127850;</span> Classic Chocolate Chip</button>
-              <button class="chip"><span>&#9749;</span> Caramel &amp; Nescafe</button>
-              <button class="chip"><span>&#127796;</span> Date &amp; Sugar</button>
+            <div class="card-body">
+              <div class="card-top">
+                <h3>Cookies Collection</h3>
+                <a href="#order" class="card-arrow" aria-label="Order cookies">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+              <p class="card-tag">Small Batch</p>
+              <a href="#order" class="card-link">Order Now &#9654;</a>
             </div>
           </article>
 
-          <!-- Cakes — featured -->
-          <article class="product-card product-card--featured" data-product="cakes" data-accent="caramel">
-            <div class="card-accent"></div>
-            <span class="card-emoji">&#127874;</span>
-            <div class="card-body">
-              <h3>Cakes</h3>
-              <p>Rich, moist, and impossible to forget. Our Trio-Leches soaks in three milks, the Chocolate Fudge is pure indulgence, and the Baklava Cake bridges two worlds.</p>
+          <article class="product-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop&q=80" alt="Signature layered cake" loading="lazy">
             </div>
-            <div class="product-subgrid">
-              <button class="chip"><span>&#129371;</span> Trio-Leches</button>
-              <button class="chip"><span>&#127851;</span> Chocolate Fudge</button>
-              <button class="chip"><span>&#127855;</span> Baklava Cake</button>
+            <div class="card-body">
+              <div class="card-top">
+                <h3>Signature Cakes</h3>
+                <a href="#order" class="card-arrow" aria-label="Order cakes">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+              <p class="card-tag">Custom Made</p>
+              <a href="#order" class="card-link">Order Now &#9654;</a>
             </div>
           </article>
 
-          <!-- Sour Snacks -->
-          <article class="product-card" data-product="snacks" data-accent="citrus">
-            <div class="card-accent"></div>
-            <span class="card-emoji">&#127819;</span>
+          <article class="product-card">
+            <div class="card-image">
+              <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&h=300&fit=crop&q=80" alt="Artisanal sour treats" loading="lazy">
+            </div>
             <div class="card-body">
-              <h3>Sour Snacks</h3>
-              <p>Our signature collection. Plums, barberries, and cherries blended into a tangy, addictive fusion you won&#8217;t find anywhere else.</p>
-            </div>
-            <div class="product-subgrid">
-              <button class="chip"><span>&#127825;</span> Plum Mix</button>
-              <button class="chip"><span>&#127826;</span> Cherry Blend</button>
-              <button class="chip"><span>&#10024;</span> Signature Sour Trio</button>
-            </div>
-          </article>
-
-          <!-- Pickles -->
-          <article class="product-card" data-product="pickles" data-accent="sage">
-            <div class="card-accent"></div>
-            <span class="card-emoji">&#129362;</span>
-            <div class="card-body">
-              <h3>Pickles</h3>
-              <p>Crunchy, tangy, and made with time-honoured family recipes. The perfect companion to any table.</p>
-            </div>
-            <div class="product-subgrid">
-              <button class="chip"><span>&#127814;</span> Eggplant Pickle</button>
-              <button class="chip"><span>&#129365;</span> Fine-Cut Tomato</button>
-              <button class="chip"><span>&#129362;</span> Chunky Vinegar Mix</button>
+              <div class="card-top">
+                <h3>Sour Snacks</h3>
+                <a href="#order" class="card-arrow" aria-label="Order sour snacks">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+              <p class="card-tag">Artisanal</p>
+              <a href="#order" class="card-link">Order Now &#9654;</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- ── Quote ── -->
-    <section class="quote-section">
-      <div class="container">
-        <blockquote class="pull-quote">
-          <span class="pull-quote-mark" aria-hidden="true">&#8220;</span>
-          <p>We believe the best things in life are made by hand, with patience, and shared with the people you love.</p>
-          <footer>&#8212; Sweet &amp; Sour Treats</footer>
-        </blockquote>
-      </div>
-    </section>
-
-    <!-- ── About ── -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-head">
-          <span class="label">Our Story</span>
-          <h2>Two sides,<br>one <em>kitchen</em></h2>
+    <!-- Service / About -->
+    <section id="about" class="service-section">
+      <div class="service-inner">
+        <div class="service-image">
+          <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce?w=600&h=700&fit=crop&q=80" alt="Decorated cupcake with strawberry" loading="lazy">
         </div>
-        <div class="about-columns">
-          <div class="about-col">
-            <div class="about-number">01</div>
-            <h3>The Sweet Side</h3>
-            <p>It started with a simple chocolate chip cookie and a dream. Today, our kitchen turns out classics like Trio-Leches, Chocolate Fudge Cake, and fragrant Baklava Cake &#8212; recipes perfected over years, designed to make you feel at home.</p>
-          </div>
-          <div class="about-col">
-            <div class="about-number">02</div>
-            <h3>The Sour Twist</h3>
-            <p>Not everyone craves sugar. For the bold and the curious, we created our Signature Sour Collection &#8212; a zesty fusion of plums, barberries, and cherries that reinvents snacking. Think tangy, think addictive, think unforgettable.</p>
-          </div>
-          <div class="about-col">
-            <div class="about-number">03</div>
-            <h3>The Handmade Promise</h3>
-            <p>No factories, no shortcuts, no preservatives. Every cookie is scooped by hand, every cake is layered with care, and every jar of pickles follows a family recipe. That&#8217;s the Sweet &amp; Sour difference.</p>
-          </div>
+        <div class="service-text">
+          <span class="label">Discover the</span>
+          <h2>Sweet &amp; Sour<br>Experience</h2>
+          <p>Made with love in our small Toronto kitchen &mdash; handcrafted cookies, signature cakes, and our bold sour snack collection. Every item is baked to order, never sitting on a shelf.</p>
+          <a href="#order" class="btn-circle" aria-label="Learn more">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- ── Order / Contact ── -->
+    <!-- Order / Contact -->
     <section id="order" class="order">
       <div class="container">
         <div class="order-layout">
@@ -279,7 +224,7 @@
 
   </main>
 
-  <!-- ── Footer ── -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="container footer-grid">
       <div class="footer-brand">

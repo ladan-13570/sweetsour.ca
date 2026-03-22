@@ -35,8 +35,8 @@
 
   // ── Scroll reveal ──
   var revealEls = document.querySelectorAll(
-    ".product-card, .about-col, .order-text, .order-form-wrap, " +
-    ".pull-quote, .section-head, .label, .order-perks"
+    ".product-card, .service-text, .service-image, .order-text, " +
+    ".order-form-wrap, .section-head, .hero-text, .hero-image"
   );
 
   if (revealEls.length && "IntersectionObserver" in window) {
@@ -49,26 +49,15 @@
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: "0px 0px -30px 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
 
     revealEls.forEach(function (el, i) {
       var siblings = el.parentElement ? el.parentElement.children : [];
       var idx = Array.prototype.indexOf.call(siblings, el);
-      el.style.transitionDelay = (idx * 0.07) + "s";
+      el.style.transitionDelay = (idx * 0.08) + "s";
       observer.observe(el);
     });
   }
-
-  // ── Product card expand ──
-  var cards = document.querySelectorAll(".product-card");
-  cards.forEach(function (card) {
-    card.addEventListener("click", function (e) {
-      if (e.target.closest(".chip")) return;
-      var wasActive = card.classList.contains("active");
-      cards.forEach(function (c) { c.classList.remove("active"); });
-      if (!wasActive) card.classList.add("active");
-    });
-  });
 
   // ── EmailJS ──
   var EMAILJS_PUBLIC_KEY = "TKoxK2hGpU8Ys6boW";
