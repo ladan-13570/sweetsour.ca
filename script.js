@@ -1,31 +1,73 @@
-// Yummy Studio — Mini site behavior
+// Sweet & Sour Treats
 
 (function () {
-  // Current year in footer
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-  // Mobile menu toggle
+  // ── Mobile menu toggle ──
   var toggle = document.querySelector(".nav-toggle");
   var navLinks = document.querySelector(".nav-links");
   if (toggle && navLinks) {
     toggle.addEventListener("click", function () {
       navLinks.classList.toggle("open");
+      toggle.classList.toggle("active");
     });
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         navLinks.classList.remove("open");
+        toggle.classList.remove("active");
       });
     });
   }
 
-  // Product sub-menu toggle
+  // ── Header scroll effect ──
+  var header = document.querySelector(".header");
+  if (header) {
+    var onScroll = function () {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ── Scroll reveal ──
+  var revealTargets = document.querySelectorAll(
+    ".about-card, .product-card, .contact-form, .contact-social, .section-label, .about h2, .products h2, .contact h2, .contact-intro"
+  );
+
+  if (revealTargets.length && "IntersectionObserver" in window) {
+    revealTargets.forEach(function (el) {
+      el.classList.add("reveal");
+    });
+
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    revealTargets.forEach(function (el, i) {
+      el.style.transitionDelay = (i % 4) * 0.08 + "s";
+      revealObserver.observe(el);
+    });
+  }
+
+  // ── Product sub-menu toggle ──
   var productCards = document.querySelectorAll(".product-card");
   if (productCards.length) {
     productCards.forEach(function (card) {
       card.addEventListener("click", function (event) {
         if (event.target.closest(".subitem-card")) return;
-
         var isActive = card.classList.contains("active");
         productCards.forEach(function (c) {
           c.classList.remove("active");
@@ -37,9 +79,7 @@
     });
   }
 
-  // ── EmailJS Contact Form ──────────────────────────────────────────
-  // IMPORTANT: Replace YOUR_PUBLIC_KEY and YOUR_TEMPLATE_ID below
-  // with values from your EmailJS dashboard.
+  // ── EmailJS Contact Form ──
   var EMAILJS_PUBLIC_KEY = "TKoxK2hGpU8Ys6boW";
   var EMAILJS_SERVICE_ID = "service_t1bn3os";
   var EMAILJS_TEMPLATE_ID = "template_epskbzx";
@@ -114,7 +154,6 @@
       return;
     }
 
-    // reCAPTCHA check
     var captchaResponse = grecaptcha.getResponse();
     if (!captchaResponse) {
       showError("Please complete the CAPTCHA verification.");
@@ -142,7 +181,7 @@
         grecaptcha.reset();
       })
       .catch(function (err) {
-        showError("Something went wrong. Please try again or email us directly.");
+        showError("Something went wrong. Please try again or reach out on Instagram.");
         console.error("EmailJS error:", err);
       })
       .finally(function () {
