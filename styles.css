@@ -351,13 +351,14 @@ h2 em {
   content: "";
   position: absolute;
   inset: 0;
-  /* Light wash only — this photo already has a bright open left side,
-     so just a gentle gradient keeps text crisp without dulling the image */
+  /* The warm bokeh left side reads well already; just a very soft
+     left-edge wash ensures text contrast without flattening the photo */
   background: linear-gradient(
     to right,
-    rgba(255,252,248,0.55) 0%,
-    rgba(255,252,248,0.25) 45%,
-    transparent 70%
+    rgba(252,248,240,0.60) 0%,
+    rgba(252,248,240,0.30) 40%,
+    rgba(252,248,240,0.05) 65%,
+    transparent 100%
   );
 }
 
