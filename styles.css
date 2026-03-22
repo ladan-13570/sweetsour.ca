@@ -343,7 +343,7 @@ h2 em {
   inset: 0;
   background-image: url("images/hero-bg.png");
   background-size: cover;
-  background-position: center right;
+  background-position: center center;
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -351,12 +351,13 @@ h2 em {
   content: "";
   position: absolute;
   inset: 0;
+  /* Light wash only — this photo already has a bright open left side,
+     so just a gentle gradient keeps text crisp without dulling the image */
   background: linear-gradient(
     to right,
-    rgba(250,245,237,0.82) 0%,
-    rgba(250,245,237,0.65) 40%,
-    rgba(250,245,237,0.08) 70%,
-    transparent 100%
+    rgba(255,252,248,0.55) 0%,
+    rgba(255,252,248,0.25) 45%,
+    transparent 70%
   );
 }
 
