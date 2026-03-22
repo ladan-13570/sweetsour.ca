@@ -8,23 +8,30 @@
   // ── Mobile menu ──
   var toggle = document.querySelector(".nav-toggle");
   var navLinks = document.querySelector(".nav-links");
+  var header = document.querySelector(".header");
+
+  function closeMenu() {
+    navLinks.classList.remove("open");
+    toggle.classList.remove("active");
+    if (header) header.classList.remove("menu-open");
+    document.body.style.overflow = "";
+  }
+
   if (toggle && navLinks) {
     toggle.addEventListener("click", function () {
       var open = navLinks.classList.toggle("open");
       toggle.classList.toggle("active");
+      // Toggling menu-open on header removes backdrop-filter, which on
+      // Safari/iOS would otherwise cap the fixed overlay to header height.
+      if (header) header.classList.toggle("menu-open", open);
       document.body.style.overflow = open ? "hidden" : "";
     });
     navLinks.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navLinks.classList.remove("open");
-        toggle.classList.remove("active");
-        document.body.style.overflow = "";
-      });
+      link.addEventListener("click", closeMenu);
     });
   }
 
   // ── Header scroll ──
-  var header = document.querySelector(".header");
   if (header) {
     var checkScroll = function () {
       header.classList.toggle("scrolled", window.scrollY > 50);
