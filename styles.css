@@ -385,22 +385,42 @@ h2 em {
   flex-wrap: wrap;
 }
 
+/* Mobile cake image — hidden on desktop */
+.hero-mobile-img {
+  display: none;
+}
+
 @media (max-width: 768px) {
+  /* Hide the landscape bg photo on mobile */
   .hero-bg {
-    background-position: 70% center;
+    background-image: none;
+    background: linear-gradient(160deg, var(--warm-white) 0%, var(--beige) 55%, var(--peach) 100%);
   }
   .hero-bg::after {
-    background: linear-gradient(
-      to bottom,
-      rgba(250,245,237,0.88) 0%,
-      rgba(250,245,237,0.75) 50%,
-      rgba(250,245,237,0.5) 100%
-    );
+    display: none;
   }
+
+  /* Show the cake image above the title */
+  .hero-mobile-img {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  .hero-mobile-img img {
+    width: 75vw;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 32px rgba(61,43,31,0.14));
+  }
+
   .hero-inner {
-    padding-top: 6rem;
+    padding-top: 5.5rem;
     padding-bottom: 3rem;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   }
   .hero-text {
     text-align: center;
