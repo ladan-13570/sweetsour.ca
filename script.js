@@ -42,7 +42,7 @@
 
   // ── Scroll reveal ──
   var revealEls = document.querySelectorAll(
-    ".product-card, .service-text, .service-image, .order-text, " +
+    ".family-row, .service-text, .service-image, .order-text, " +
     ".order-form-wrap, .section-head, .hero-text, .hero-image"
   );
 
