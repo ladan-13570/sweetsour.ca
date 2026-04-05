@@ -377,7 +377,7 @@ h2 em {
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(2.6rem, 5.5vw, 4rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   font-weight: 700;
   color: var(--brown);
   line-height: 1.1;
@@ -494,7 +494,7 @@ h2 em {
 
 .family-header {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.25rem;
@@ -506,22 +506,12 @@ h2 em {
   gap: 1.1rem;
 }
 
-.family-num {
-  font-family: var(--font-display);
-  font-size: 3rem;
-  font-weight: 700;
-  color: rgba(61,43,31,0.07);
-  line-height: 1;
-  min-width: 3.5rem;
-  user-select: none;
-}
-
 .family-title {
   font-family: var(--font-display);
-  font-size: 1.45rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--brown);
-  margin: 0 0 0.2rem;
+  margin: 0;
   line-height: 1.2;
 }
 
@@ -601,6 +591,23 @@ h2 em {
   transform: scale(1.045);
 }
 
+.family-img-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.55rem 1rem;
+  background: rgba(30, 18, 8, 0.52);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
   .family-header {
@@ -621,8 +628,8 @@ h2 em {
   .family-images--two {
     grid-template-columns: 1fr;
   }
-  .family-num {
-    font-size: 2.2rem;
+  .family-title {
+    font-size: 1.6rem;
   }
 }
 
